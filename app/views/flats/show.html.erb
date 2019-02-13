@@ -1,0 +1,25 @@
+<div class="banner">
+</div>
+<div class="container-show">
+  <div class="card-show">
+    <div class="flat-info">
+      <div class="flat-name">
+        <h2><strong><%= @flat.name %></strong></h2>
+        <h5><%= @flat.address %></h5>
+      </div>
+      <div class="flat-desc">
+        <p><strong>A bit more about this flat...</strong></p>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="flat-info2">
+      <div class="flat-details">
+        <p><strong>Details</strong></p>
+        <ul class='list-inline'>
+          <li><p><i class="fas fa-users"></i> <%= @flat.number_of_guests %></p></li>
+          <li><p><i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

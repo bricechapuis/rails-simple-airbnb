@@ -1,0 +1,18 @@
+<div class="container form">
+  <h2>Add a new flat</h2>
+    <br>
+    <%= form_for @flat do |f| %>
+      <p><%= f.label :name %></p>
+      <p><%= f.text_field :name %></p>
+      <p><%= f.label :address %></p>
+      <p><%= f.text_field :address %></p>
+      <p><%= f.label :description %></p>
+      <p><%= f.text_area :description %></p>
+      <p><%= f.label :price_per_night %></p>
+      <p><%= f.text_field :price_per_night %></p>
+      <p><%= f.label :number_of_guests %></p>
+      <p><%= f.text_field :number_of_guests %></p>
+      <br>
+      <p><%= f.submit %>
+    <% end %>
+</div>

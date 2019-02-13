@@ -1,0 +1,32 @@
+
+<div class="container">
+  <h1>All our Flats (<%= @flats.count %>)</h1>
+
+  <div class="card-list-container">
+    <div class="card-list">
+      <div class="row">
+        <% @flats.each do |flat| %>
+          <div class="col-xs-4">
+            <div class="card">
+              <div class="content" style="background-image:url('https://source.unsplash.com/random/?apartment'),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));background-size:cover;background);">
+                <h4><%= flat.name %></h4>
+                <div class="flat-address"><%= flat.address %></div>
+                <div class="icons">
+                  <ul class='list-inline'>
+                    <li><p><i class="fas fa-users"></i> <%= flat.number_of_guests %></p></li>
+                    <li><p><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link">
+                <%= link_to 'More Info', flat_path(flat), class: 'info-link' %>
+                <%= link_to 'Edit', edit_flat_path(flat), class: 'edit-link' %>
+                <%= link_to 'Delete', flat_path(flat), class: 'delete-link', method: :delete, data: { confirm: "Are you sure?" } %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
